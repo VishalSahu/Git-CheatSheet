@@ -18,6 +18,7 @@ Change Git Remote
 	~git remote set-url origin <url_of_ssh_or_https>
 
 Push via SSH
+	~git remote add origin <SSH link>
 	~git commit -a -m "Test via SSH"
 	~git push
 
