@@ -1,0 +1,141 @@
+
+
+SOME MORE TOPICS WILL BE ADDED SOON
+
+
+
+
+
+Git Remote Repo
+	~git remote -v
+	~git remote add origin https://github.com/VishalSahu/Demo.git
+	~git push origin -u master
+
+Git Clone Repo
+	~git clone <url>
+
+Change Git Remote
+	~git remote set-url origin <url_of_ssh_or_https>
+
+Push via SSH
+	~git commit -a -m "Test via SSH"
+	~git push
+
+Create Branch
+	~git branch <branch>
+
+To check Branches
+	~git branch
+
+To check Remote Branch
+	~git branch -r
+
+To check all local and remote branch
+	~git branch -a
+
+To change current branch
+	~git checkout -b TA 001_discount_calculation
+
+'Touch' command helps us to create a file on bash
+
+List directory
+	~ls -l
+
+1 level up in directory 
+	~cd ..
+
+To check git log of specific branch
+	~git log TA0001<press TAB for auto-completion
+
+To switch back to master branch
+	~git checkout master
+
+To switch to specific commit
+	~git checkout <git commid serial ID>
+	~git push origin -u TA001_discount_calc
+
+To delete a branch
+	~git branch -d <Branch_Name>
+
+
+
+PULL REQUESTS(PR) & MERGE REQUESTS(MR)
+To add collaborators
+	Goto setting > Manage Access > Invite a Collaborator > Earch via nickname > Add him/her
+
+UPDATING LOCAL REPOSITORY
+To fetch all changes on Remote repository
+	~git fetch 
+
+To merge Remote to local Repo
+	~git merge
+
+To fetch and merge together
+	~git pull
+
+To Create and Switch to a branch
+	~agit switch -c TA0002_virtual_cart
+
+To create directory
+	~mkdir
+
+To create a file in created directory
+	~cd <directory_name>
+	~touch <filename.extension>
+
+To push to another remote branch
+	~git push -u origin <branch name>
+
+Pull request > Rebase and Merge > Delete Branch
+
+MERGE CONFLICTS
+	dev 1 and dev 2 both change a file
+	and dev1 push it to remote repo
+	then dev2 tries to push but its merge conflicts
+	so dev2 has to update local repo by pull 
+	then resolve the conflict by making changes in files
+	then add them to staging area
+	then push
+	(it will create another commit history)
+	
+better way to resolve conflicts
+GIT REBASE
+	
+	~git reset --hard HEAD~1
+	(HEAD is current place in git)
+	(restore files from 1 commit ago)
+	
+	~git pull --rebase origin master
+	~nano <file which create conflict>
+	(We have to edit the conflict)
+	~git add .
+	~git rebase --continue
+	~git push (if this not work then try below one)
+	~git push -f
+
+INTERACTIVE REBASE
+	~ 
+
+FOUR RULES OF HAPPY WORK WITH GIT
+	1.Always create branches from the master
+	2.Force update and change commit history
+	  only on your branches.
+	3.Use --force-with-lease instead of -f
+	4.Always rebase on the origin master branch
+	  before creating a pull request.
+
+Git Interactive Commit
+	(used to change commit message before last commit)
+	~git rebase -i HEAD~3
+	(shows commits file,we can change messages)
+ 
+To merge 2 or more commit with message
+	~git rebase -i HEAD~3
+	(add s to commits in file)
+	(adjust commit message,delete one or more)
+
+then at last run,
+	~git push --force-with-lease
+
+GIT RESET COMMAND AND ITS USES
+	~
